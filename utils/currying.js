@@ -14,7 +14,7 @@
  *   console.log(fn(2)()(3)(5)) // 10
  *  
  */
-export function currying (fn, length) {
+module.exports = function currying (fn, length) {
   length = length || fn.length // 第一次调用获取函数 fn 参数的长度，后续调用获取 fn 剩余参数的长度
   return function (...args) { // currying 包裹之后返回一个新函数，接收参数为 ...args
     return args.length >= length // 新函数接收的参数长度是否大于等于 fn 剩余参数需要接收的长度
