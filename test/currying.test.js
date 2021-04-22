@@ -14,4 +14,7 @@ describe('currying unit tests', () => {
     test('fn(2)()(3)(5) should be 10', () => {
         expect(fn(2)()(3)(5)).toEqual(10)
     })
+    test('fn(2)()(3)(5)() should be 10', () => {
+        expect(fn(2)()(3)(5)).toEqual(10)
+    })
 })
